@@ -1,0 +1,107 @@
+ProteoCast for FlyBase — test version 0.3.0
+===========================================
+
+A Chrome extension that shows ProteoCast missense-variant predictions
+(Abakarova et al. 2026, Nat Commun) directly on FlyBase pages.
+
+
+EASIEST: install it from the Chrome Web Store (one click, automatic
+updates, no developer mode needed):
+  https://chromewebstore.google.com/detail/proteocast-for-flybase/pdkdmicjkpiamojmcfgbcajcnifccokl
+If you previously loaded a test version from a zip, remove it first
+in chrome://extensions ("Remove" on the old ProteoCast card).
+
+The steps below are only for installing from the zip.
+
+
+INSTALL FROM THE ZIP (about 2 minutes)
+-------
+Works in Chrome, Edge, Brave and other Chromium browsers.
+NOT in Safari or Firefox.
+
+1. UNZIP the file into a place where it will stay, e.g. Documents
+   (not Downloads, which people tend to clean up: Chrome keeps loading
+   the extension from that folder, so it must not be deleted or moved).
+   - Windows: right-click the zip > "Extract All..." > Extract.
+   - Mac: double-click the zip.
+   You get a folder called "proteocast-flybase-0.3.0". Open it once to
+   check: it must contain a file called "manifest.json".
+
+2. In Chrome, type   chrome://extensions   in the address bar, press Enter.
+   (Edge: edge://extensions   Brave: brave://extensions)
+
+3. Turn ON "Developer mode": the switch at the TOP RIGHT of that page
+   (Edge: in the left-hand column).
+   Three new buttons appear at the top left.
+
+4. Click "Load unpacked" (the first of those buttons) and select the
+   "proteocast-flybase-0.3.0" folder itself (select it, don't open it),
+   then click "Select" / "Open".
+   A "ProteoCast for FlyBase" card appears in the list. Done.
+
+5. Test: open https://flybase.org/reports/FBgn0031589
+   A ProteoCast panel appears at the top of the page.
+
+Chrome may now show a banner or a warning about developer-mode
+extensions: that's expected for extensions not installed from the
+Chrome Web Store, and it's safe to dismiss.
+
+
+IF IT DOESN'T WORK
+------------------
+- "Manifest file is missing or unreadable"
+    You selected the wrong folder: pick the folder that directly
+    contains manifest.json (not the zip, not the folder above it).
+- No "Load unpacked" button
+    Developer mode is off: turn on the switch (step 3).
+- The Developer mode switch is greyed out, or a message says it is
+  blocked by your administrator
+    Your computer is managed by your institution, which forbids this
+    kind of installation. Use a personal computer, or wait for the
+    Chrome Web Store version (one click, no developer mode).
+- Installed, but no panel on FlyBase
+    Reload the FlyBase page; check that the extension's switch is on
+    in chrome://extensions; the panel only appears on FlyBase report
+    pages (protein, gene or allele), not on the home or search pages.
+- It worked, then stopped after a while
+    The unzipped folder was moved or deleted. Unzip again into a
+    permanent place and load it again.
+
+UPDATING from an older test version: in chrome://extensions, click
+"Remove" on the old ProteoCast card first, then follow steps 1-4 with
+the new zip. There are no automatic updates in this test version.
+
+
+WHAT TO TRY
+-----------
+A panel appears at the top of FlyBase report pages:
+
+- Protein pages, e.g. https://flybase.org/reports/FBpp0077168 (Naprt-PC)
+    per-residue mutational sensitivity in blue (white = tolerant, dark blue
+    = sensitive), grey band = low-confidence alignment, protein domains;
+    drag the mouse across the track to show only that part of the sequence;
+    type a variant like E147V or Glu147Val and press Enter;
+    in the sequence, hover a residue to see its substitutions in red shades
+    (dark = impactful, pink = mild, pale = neutral).
+- Gene pages, e.g. https://flybase.org/reports/FBgn0031589 (Naprt)
+    same panel, with a menu to switch between the isoforms.
+- Allele pages, e.g. https://flybase.org/reports/FBal0413654 (Naprt[E147V])
+    the allele's amino-acid change is classified and marked on the track.
+
+About 99% of D. melanogaster proteins (release 6.44) have a prediction;
+the panel says so when one doesn't.
+
+
+FEEDBACK
+--------
+Anything is useful: wrong or confusing results, pages where the panel
+doesn't appear or looks broken, wording, what you'd want added.
+A screenshot plus the page address helps a lot.
+Send it to Michael Rera.
+
+
+PRIVACY
+-------
+The extension reads only the FlyBase address you are on. It asks FlyBase's
+public API for the protein sequence and proteocast.ijm.fr for the predictions.
+Nothing else is collected or sent anywhere.
