@@ -1,0 +1,18 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>ProteoCast for FlyBase — settings</title>
+<style>
+  body{font:14px system-ui,Arial,sans-serif;padding:16px;width:420px;color:#222}
+  label{display:block;margin:12px 0 4px;font-weight:600}
+  input[type=text]{width:100%;box-sizing:border-box;padding:6px;border:1px solid #bbb;border-radius:4px;font:inherit}
+  .hint{color:#666;font-size:12px;margin-top:4px}
+  button{margin-top:14px;padding:6px 14px;border:1px solid #1f77b4;background:#1f77b4;color:#fff;border-radius:4px;cursor:pointer;font:inherit}
+  #status{margin-left:10px;color:#2e7d32}
+</style>
+<h2 style="margin:0">ProteoCast for FlyBase</h2>
+<label>Prediction endpoint</label>
+<input type="text" id="endpoint">
+<div class="hint">Use <code>{fbpp}</code> as placeholder, e.g. <code>https://proteocast.ijm.fr/data/api/{fbpp}.json</code> (the default)
+.</div>
+<button id="save">Save</button><span id="status"></span>
+<script src="options.js"></script>
